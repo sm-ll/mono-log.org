@@ -1,0 +1,84 @@
+.redactor-box {
+  margin-bottom: 0;
+  z-index: 1 !important;
+}
+
+.redactor-box .redactor-editor {
+	padding: 15px;
+	box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+}
+
+// Do this so the 'required' html5 stuff works.
+// It doesn't work when the field is hidden
+.redactor-box textarea {
+  .source-hidden & {
+    display: block !important;
+    background: none;
+    position: absolute;
+    bottom: 0;
+    height: 1px !important;
+  }
+  .source-visible & {
+    background: black;
+    padding: 15px;
+  }
+}
+
+#redactor_modal {
+	font-family: Helvetica, Arial, Verdana, Tahoma, sans-serif !important;
+}
+
+.redactor_btns_box {
+	font-family: Helvetica, Arial, Verdana, Tahoma, sans-serif !important;
+}
+
+.redactor_btns_box input[type=button] {
+	font-family: Helvetica, Arial, Verdana, Tahoma, sans-serif !important;
+}
+
+.redactor-toolbar {
+  background: #f4f4f0;
+  background: -moz-linear-gradient(top,  #fff 0%, #f4f4f0 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(100%,#f4f4f0));
+  background: -webkit-linear-gradient(top, #fff 0%, #f4f4f0 100%);
+  background: -o-linear-gradient(top, #fff 0%, #f4f4f0 100%);
+  background: -ms-linear-gradient(top, #fff 0%, #f4f4f0 100%);
+  background: linear-gradient(to bottom, #fff 0%, #f4f4f0 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#f4f4f0',GradientType=0 );
+  border: 1px solid #d7d7ca;
+  border-bottom:none;
+  box-shadow: none;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.redactor-toolbar li {
+  padding-bottom: 1px;
+}
+
+.redactor-editor {
+  border: 1px solid #d7d7ca;
+  padding-top: 15px;
+  box-shadow: inset 0px 1px 1px rgba(0,0,0,.1) !important;
+}
+
+
+#redactor-modal-close {
+  top: 0;
+  right: 6px;
+}
+
+#redactor-modal-box:before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #5e5c49 url(/admin/themes/ascent/img/topo-bigger-white.png);
+  opacity: .7;
+}

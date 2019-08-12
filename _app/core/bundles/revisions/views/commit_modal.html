@@ -1,0 +1,22 @@
+<div id="revisions-save-message" class="revisions-save-message revisions-modal" data-path="{{ path }}">
+	<div class="modal">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			<h3>{{ localization fetch="what_changed" }}</h3>
+		</div>
+		<div class="modal-body">
+			<form class="save-form">
+				<div class="form-element">
+					<textarea name="save_message" id="modal-save-message" cols="30" rows="10"></textarea>
+				</div>
+				<p class="instructions">
+					This note will help you find this revision later in case you need to come back to it.
+				</p>
+			</form>
+		</div>
+		<div class="modal-footer">
+			<button class="btn btn-small nevermind" data-dismiss="modal">{{ localization fetch="cancel" }}</button>
+			<button class="btn btn-small btn-publish"><span class="ss-icon">check</span> {{ localization fetch="save_publish" }}</button>
+		</div>
+	</div>
+</div>

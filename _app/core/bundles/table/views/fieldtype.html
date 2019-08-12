@@ -1,0 +1,52 @@
+<script type="text/html" id="template-{{ field_id }}">
+
+<% if (rows.length && rows[0].cells.length) { %>
+
+	<table class="table-list">
+		<thead>
+			<tr>
+				<th class="row-count"></th>
+				<% _.each(rows[0].cells, function(cell, c) { %>
+					<th class="column-count" data-index="<%= c %>">
+						<div class="count"><%= c + 1 %></div>
+						<a href="#" class="delete confirm"><span class="ss-icon">delete</span></a>
+					</th>
+				<% }); %>
+			</tr>
+		</thead>
+		<tbody>
+			<% _.each(rows, function(row, r) { %>
+			<tr data-index="<%= r %>">
+				<th class="row-count drag-indicator">
+					<div class="count"><%= r + 1%></div>
+					<a href="#" class="delete confirm"><span class="ss-icon">delete</span></a>
+				</th>
+				<% _.each(row.cells, function(cell, c) { %>
+					<td class="cell-text">
+						<textarea 
+							name="{{ field_name }}[<%= r %>][cells][<%= c %>]" 
+							data-row="<%= r %>" 
+							data-cell="<%= c %>"
+							{{ if height }}style="height: {{ height }}"{{ /if }}
+						><%= cell %></textarea>
+					</td>
+				<% }); %>
+			</tr>
+			<% }); %>
+		</tbody>
+	</table>
+
+<% } %>
+
+</script>
+
+<div id="{{ field_id }}"></div>
+
+<button class="btn btn-small btn-icon add-row"><span class="ss-icon">add</span>Row</button>
+<button class="btn btn-small btn-icon add-column"><span class="ss-icon">add</span>Column</button>
+
+<script>
+	$('#{{ field_id }}').table({
+		data: {{ rows }}
+	});
+</script>

@@ -1,0 +1,347 @@
+.file-field-container {
+  border: 1px solid $borderColor;
+  padding-left: 200px;
+  position: relative;
+  min-height: 157px;
+  @include border-radius(3px);
+
+  .file-field { display: none; }
+  .disabled .file-field { display: block; }
+
+  .drop-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 200px;
+    background: $inputBackground;
+    text-align: center;
+    font-size: 14px;
+    border-right: 1px solid $borderColor;
+    color: darken($borderColor, 20%);
+
+    &:hover {
+      .helper-text {
+        color: darken($borderColor, 30%);
+      }
+      .ss-icon {
+        color: darken($borderColor, 10%);
+      }
+    }
+    .helper-text {
+      position: absolute;
+      top: 50%;
+      margin-top: -25px;
+      width: 100%;
+    }
+
+    .ss-icon {
+      color: $borderColor;
+      font-size: 32px;
+      margin: 0;
+      line-height: 1;
+      display: block;
+    }
+
+    .max-text,
+    .drop-text { display: none; }
+
+    &.dz-drag-hover {
+      background: darken($inputBackground, 7%);
+      color: darken($borderColor, 25%);
+      .ss-icon {
+        color: darken($borderColor, 7%);
+      }
+      .drop-text { display: block; }
+      .placeholder { display: none; }
+    }
+
+  }
+
+  &.single-file {
+	  .drop-area {
+		  width: 100%;
+	  }
+  }
+
+  &.max-files-reached {
+    padding-left: 0;
+    .drop-area { display: none; }
+  }
+
+  .choose-existing-file {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    font-size: 12px;
+    font-style: italic;
+
+    span {
+      font-style: normal;
+      cursor: pointer;
+      &:hover {
+        color: $linkColor;
+      }
+    }
+  }
+
+  .existing-files {
+    @extend .clearfix;
+    font-size: 0;
+    margin-bottom: 15px;
+    width: 100%;
+
+    .dz-preview {
+      float: left;
+      vertical-align: top;
+      margin: 15px 0 0 15px;
+      border: 1px solid white;
+      cursor: pointer;
+      position: relative;
+      width: 125px;
+      height: 125px;
+      @include border-radius(3px);
+      background: $inputBackground url(../img/loading.gif) 50% 50% no-repeat;
+      &:hover .remove-file {
+        display: block;
+        &:hover {
+          background-color: #000;
+        }
+      }
+    }
+    .ui-sortable-placeholder {
+      visibility: visible !important;
+      border: 1px dashed $borderColor;
+    }
+    .dz-filename { display: none; }
+    img {
+      width: 125px;
+      height: 125px;
+      @include border-radius(3px);
+    }
+    .remove-file {
+      display: none;
+      background: rgba(black, .5);
+      color: white;
+      padding: 6px 5px 2px;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      font-size: 16px;
+      line-height: 1;
+      border-radius: 3px;
+      margin: 0;
+      cursor: pointer;
+    }
+    p {
+      color: darken($lightTan, 30%);
+      font-size: 13px;
+    }
+  }
+
+  .dz-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    .dz-upload {
+      display: block;
+      background: $green;
+      height: 5px;
+      width: 0;
+      @include border-radius(0 0 3px 3px);
+      -webkit-transition: width 0.5s ease-out;
+              transition: width 0.5s ease-out;
+    }
+  }
+
+  .click-target {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+  }
+}
+
+
+//
+// GRID
+//
+.grid tbody tr td.cell-file {
+  padding: 0;
+}
+.cell-file .file-field-container {
+  padding-left: 0;
+  min-height: 0;
+  border: 0;
+
+  .drop-area {
+    position: relative;
+    width: 100%;
+    border-right: 0;
+    border-bottom: 1px solid $borderColor;
+    padding: 10px 15px;
+    text-align: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    .ss-icon {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 18px;
+      margin-right: 5px;
+    }
+    .helper-text {
+      position: static;
+      display: inline-block;
+      width: auto;
+      margin: 0;
+    }
+    .max-text,
+    .drop-text { display: none; }
+    &.dz-drag-hover {
+      .placeholder { display: none; }
+      .drop-text { display: inline-block; }
+    }
+  }
+
+  &.max-files-reached .drop-area {
+    .helper-text { display: none; }
+    .max-text { display: block; }
+  }
+
+  .existing-files {
+    font-size: 13px;
+    margin-bottom: 0;
+    .dz-preview {
+      display: block;
+      clear: both;
+      float: none;
+      height: auto;
+      width: auto;
+      background: $inputBackground;
+      padding: 6px 5px 6px;
+      border: 1px solid $borderColor;
+      margin: 15px;
+      @include border-radius(3px);
+    }
+    .sortable-placeholder {
+      width: auto;
+      height: auto;
+      float: none;
+      border: 1px dashed $borderColor;
+      vertical-align: top;
+      margin: 15px;
+    }
+    .dz-filename {
+      display: block;
+      padding-right: 30px;
+      span { display: block; }
+    }
+    .dz-size { display: none; }
+    img {
+      float: left;
+      width: 20px;
+      height: 20px;
+      margin: -1px 10px 0 0;
+    }
+    .remove-file {
+      display: block;
+      font-size: 12px;
+      background: $linkColor;
+    }
+  }
+  .dz-progress .dz-upload {
+    height: 1px;
+  }
+
+  .choose-existing-file {
+    display: inline-block;
+    position: relative;
+    bottom: auto;
+    left: auto;
+    right: auto;
+  }
+
+  &.empty {
+    border-bottom: 0;
+    .existing-files { display: none; }
+  }
+}
+
+
+//
+// FILE SELECTOR
+//
+.existing-file-selector {
+
+  .modal {
+    width: 575px;
+  }
+
+  p { margin-top: 0; }
+
+  .files {
+    text-align: justify;
+    font-size: .1px;
+
+    &:after {
+      display: inline-block;
+      width: 100%;
+    }
+  }
+
+  .file, .placeholder {
+    display: inline-block;
+    vertical-align: top;
+    width: 125px;
+  }
+
+  .file {
+    margin: 0 0 15px 0;
+    position: relative;
+  }
+
+  img {
+    @include border-radius(3px);
+  }
+
+  .filename {
+    margin-top: 3px;
+    font-size: 13px;
+
+    a { color: $textColor; }
+  }
+
+  .action {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+
+    a {
+      display: inline-block;
+      background: rgba(black, .5);
+      color: white;
+      padding: 7px 5px 3px;
+      font-size: 13px;
+      line-height: 1;
+      border-radius: 3px;
+      margin: 0 2.5px;
+      cursor: pointer;
+
+      .ss-icon { margin: 0; }
+    }
+  }
+
+  .file:hover .action { display: block; }
+
+}

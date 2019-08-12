@@ -1,0 +1,12 @@
+dashboard_main_content: >
+  <h1>Replace this if you want to customize your dashboard's content</h1>
+  <p>Hello wilderness.</p>
+
+dashboard_sidebar_content: >
+  <h2>Useful Links</h2>
+  <ul>
+    <li><a href="http://statamic.com">Statamic.com</a></li>
+    <li><a href="http://twitter.com/statamic">Statamic on Twitter</a></li>
+    <li><a href="http://facebook.com/statamic">Statamic on Facebook</a></li>
+  </ul>
+  <a href="http://statamic.tenderapp.com" class="btn full-width">Get Statamic Support</a>

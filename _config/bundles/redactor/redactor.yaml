@@ -1,0 +1,68 @@
+#########################################################################
+#
+# REDACTOR FIELDTYPE SETTINGS
+#
+# For a list of all options visit: http://imperavi.com/redactor/docs/settings/
+#
+#########################################################################
+
+# Order and choose your buttons
+buttons:
+  - formatting
+  - bold
+  - italic
+  - deleted
+  - unorderedlist
+  - orderedlist
+  - outdent
+  - indent
+  - image
+  - file
+  - video
+  - table
+  - link
+  - horizontalrule
+  - fontcolor
+  - backcolor
+  - alignment
+  - html
+
+# Turn on/off cleanup on paste
+cleanOnPaste: true
+
+# Automatically replace divs with paragraphs
+replaceDivs: true
+
+# Automatically turn image links into <img> tags
+convertImageLinks: false
+
+# Automatically replace URLs with hyperlinks
+convertLinks: true
+
+# Automatically embed YouTube and Vimeo links
+convertVideoLinks: false
+
+# Set a default margin around images
+imageFloatMargin: 10px
+
+# Set the formatting tags available
+formatting:
+  - p
+  - blockquote
+  - pre
+  - h1
+  - h2
+  - h3
+  - h4
+
+# Set a minimum height (in pixels)
+minHeight: 150
+
+# Turn on/off paragraph formatting
+paragraphize: false
+
+# Turn on/off keypress shortcuts
+shortcuts: true
+
+# Turn on/off the HTML source button on the toolbar
+buttonSource: true

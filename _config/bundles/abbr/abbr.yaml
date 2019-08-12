@@ -1,0 +1,2 @@
+# the minimum number of consecutive capital letters needed to wrap in <abbr> tags
+consecutive_characters: 2

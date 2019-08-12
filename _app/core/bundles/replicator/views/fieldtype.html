@@ -1,0 +1,31 @@
+<div class="replicator-set-holder" id="{{ field_id }}">
+	{{ if sets }}
+		{{ sets }}
+			<div class="replicator-set set-{{ name }}">
+				<input type="hidden" name="{{ field_name }}[{{ zero_index }}][type]" value="{{ name }}" />
+				{{ buttons }}
+				<div class="replicator-set-label">
+					<div class="label">{{ display }}</div>
+					{{ if instructions }}<div class="instructions">{{ instructions }}</div>{{ /if }}
+				</div>
+				{{ fieldtypes }}
+					<div class="input-block input-{{ type }}">
+						{{ fieldtype }}
+					</div>
+				{{ /fieldtypes }}
+			</div>
+		{{ /sets }}
+	{{ /if }}
+</div>
+
+<p class="replicator-buttons">
+	{{ set_types }}
+		<button data-set="{{ name }}" class="btn" title="{{ instructions }}"><span class="ss-icon">plus</span>{{ display }}</button>
+	{{ /set_types }}
+</p>
+
+<script>
+	$('#{{ field_id }}').replicator({
+		templates: {{ set_templates }}
+	});
+</script>

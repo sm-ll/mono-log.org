@@ -1,0 +1,12 @@
+new_member_roles: [ member ]
+
+# Functionality available to different roles
+role_definitions:
+  edit_other_users: [ admin ]
+  edit_other_user_roles: [ admin ]
+
+# reset password
+reset_password_url: /member/reset-password
+reset_password_age_limit: 20
+reset_password_text_email:
+reset_password_html_email:

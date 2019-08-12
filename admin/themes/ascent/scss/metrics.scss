@@ -1,0 +1,85 @@
+table.metrics {
+
+	.label {
+		font-family: $defaultHeaderFont;
+		font-size: 13px;
+		font-weight: 600;
+		text-transform: uppercase;
+		margin-bottom: 15px;
+	}
+
+	.number {
+		font-size: 36px;
+	}
+
+	td {
+		text-align: center;
+		padding: 15px 15px 30px !important;
+		border-right: 1px solid $borderColor;
+	}
+
+	tr:hover td { background: transparent; }
+
+	.metric-list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		li {
+			display: inline-block;
+			padding: 0 25px;
+		}
+		.list-label {
+			color: #a0a097;
+			font-size: 12px;
+			display: block;
+		}
+		.list-value {
+			font-size: 24px;
+			display: block;	
+		}
+	}
+
+	a {
+		.label {
+			color: $linkColor;
+		}
+
+		.number {
+			color: $textColor;
+		}
+		&:hover {
+			.label, .number {
+				color: $linkHoverColor;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 470px) {
+
+	table.metrics {
+		display: block; 
+		thead, tbody, th, td, tr { 
+			display: block; 
+		}
+		
+		td { 
+			/* Behave  like a "row" */
+			border: none;
+			border-bottom: 1px solid #eee; 
+			position: relative;
+			padding-left: 50%; 
+		}
+		
+		td:before { 
+			/* Now like a table header */
+			position: absolute;
+			/* Top/left values mimic padding */
+			top: 6px;
+			left: 6px;
+			width: 45%; 
+			padding-right: 10px; 
+			white-space: nowrap;
+		}
+	}
+}

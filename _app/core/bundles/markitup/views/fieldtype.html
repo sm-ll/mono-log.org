@@ -1,0 +1,21 @@
+<div 
+	class="markitup-container"
+	data-config='{
+		{{ if resize }}"resize": {{ resize|json }},{{ /if }}
+		"imageUrl": "{{ image_dir }}",
+		"fileUrl": "{{ file_dir }}",
+		"buttons": {{ buttons|json }}
+	}'>
+
+	<textarea
+	  id="{{ field_id }}"
+		name="{{ field_name }}"
+		style="height: {{ field_config:height or "300px" }}"
+		tabindex="{{ tabindex }}"
+		class='input-textarea markitup'
+		{{ if field_config:required }}required{{ /if }}
+	>{{ field_data|noparse }}</textarea>
+
+</div>
+
+<script>$('#{{ field_id }}').statamicMarkitup();</script>

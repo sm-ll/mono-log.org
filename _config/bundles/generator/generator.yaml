@@ -1,0 +1,15 @@
+# The folder (from root) where your site will be saved
+destination: _static
+
+# An array of folder that will be copies into the destination folder
+copy:
+  - _themes/{theme}/css
+  - _themes/{theme}/img
+  - assets
+
+# A secret word to allow generation from a URL
+# e.g. example.com/TRIGGER/generator/fire/<secret_key>
+secret_key: 
+
+# Minimum time (in seconds) between generations via URL
+throttle: 1800

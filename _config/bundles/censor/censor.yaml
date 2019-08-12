@@ -1,0 +1,20 @@
+# what should found words be replaced with? (cartoon|stars|redact)
+replacement_mode: cartoon
+
+# list of words that are generally bad by themselves or within words
+bad_word_segments:
+  - poop
+  - crap
+ 
+# list of words that are generally only bad by themselves
+bad_word_singles:
+  - ass
+
+# when replacing with characters, leave the first letter to hint at what was replaced?
+leave_first_character: true
+
+# when true, replacement characters are shuffled each use
+shuffle_replacement_characters: false
+
+# string of characters to use for replacement, will be shuffled if the above option is true
+replacement_characters: "@#$%!?*&"

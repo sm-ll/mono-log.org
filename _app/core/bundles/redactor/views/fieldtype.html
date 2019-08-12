@@ -1,0 +1,20 @@
+<div 
+	class="redactor-container"
+	data-config='{
+		"redactorOptions": {{ options|json }}
+	}'>
+
+	<textarea
+	  id="{{ field_id }}"
+		name="{{ field_name }}"
+		tabindex="{{ tabindex }}"
+		class='input-textarea redactor'
+		{{ if field_config:required }}required{{ /if }}
+	>{{ field_data|noparse }}</textarea>
+
+</div>
+
+{{# Don't output a script in the Grid. #}}
+{{ if field_id != "rename_me" }}
+<script>$(function(){ $('#{{ field_id }}').statamicRedactor(); });</script>
+{{ /if }}

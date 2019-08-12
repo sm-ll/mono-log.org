@@ -1,0 +1,78 @@
+.input-table {
+
+	table {
+		margin-bottom: 15px;
+	}
+
+	table thead th { // specificity fail :(
+		@include gradient(#fff, $inputBackground);
+		padding: 8px 15px;
+		font-size: 16px;
+	}
+
+	.td {
+		padding: 10px;
+		border-bottom: 1px solid #ddd;
+		border-right: 1px solid #eee;
+	}
+
+	.row-count {
+		color: #ddd;
+		text-shadow: 0px 1px 0px #fff;
+		font-family: $defaultFont;
+		font-size: 24px;
+		font-weight: lighter;
+		padding: 2px !important;
+		text-align: center;
+		width: 20px;
+		cursor: move; cursor: -webkit-grab; cursor: -moz-grab;
+		border-right: 1px solid $borderColor;
+		border-bottom: 1px solid $borderColor;
+	}
+
+	.cell-text textarea {
+		@include border-radius(0);
+		@include border-box;
+		border: 1px solid rgba(0,0,0,0.15);
+		box-shadow: inset 0px 1px 2px rgba(0,0,0,0.1);
+		padding: .5em 10px;
+		width: 100%;
+		height: 36px;
+	}
+
+	.btn .ss-icon {
+		margin: 0;
+	}
+
+	.column-count {
+		.count { display: inline-block; }
+		.delete {
+			margin: 4px 0 0 0;
+			line-height: 1;
+		}
+	}
+
+	.delete {
+		display: none;
+		vertical-align: middle;
+		font-size: 14px !important;
+		text-align: center;
+		text-decoration: none;
+		color: #ddd;
+
+		&:hover { color: $linkColor; }
+
+		.ss-icon {
+			margin: 0;
+			font-size: 14px !important;
+		}
+	}
+
+	.row-count:hover .count {
+		display: none;
+	}
+
+	.row-count:hover .delete { display: block; }
+	.column-count:hover .delete { display: inline-block; }
+
+}

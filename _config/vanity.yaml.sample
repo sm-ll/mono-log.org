@@ -1,0 +1,11 @@
+###############################################################################
+#
+#  Vanity URLs
+#  Set up quick redirects for URLs.
+#
+#  For more on how vanity URLs work, visit
+#  http://statamic.com/learn/advanced-features/vanity-urls
+#
+###############################################################################
+
+#/promo: /contests/win-a-free-ipad

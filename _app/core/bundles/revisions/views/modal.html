@@ -1,0 +1,37 @@
+<div id="revisions-selector" class="revisions-selector revisions-modal" data-path="{{ path }}">
+	<div class="modal">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			<h3>{{ localization fetch="choose_revision_to_view" }}</h3>
+		</div>
+		<div class="modal-body">
+			<table class="simple-table">
+				<tbody>
+					{{ revisions }}
+					<tr>
+						<td{{ if is_current }} class="currently_selected"{{ /if }}>
+							<input type="radio" name="revision" value="{{ revision }}"{{ if is_current }} checked{{ /if }} />
+							{{ if is_current }}<span class="tag">← {{ localization fetch="you_are_here" }}</span>{{ /if }} {{ message }}
+							<div class="meta">
+								{{ if timestamp }}
+									{{ localization fetch="published" }}
+									{{ timestamp|relative:smart }}
+								{{ /if }}
+	
+								{{ if author }}
+									{{ localization fetch="by" }}
+									{{ author }}
+								{{ /if }}
+							</div>
+						</td>
+					</tr>
+					{{ /revisions }}
+				</tbody>
+			</table>
+		</div>
+		<div class="modal-footer">
+			<button class="btn btn-small -gray nevermind" data-dismiss="modal">{{ localization fetch="cancel" }}</button>
+			<button class="btn btn-small">{{ localization fetch="view_this_revision" }}</button>
+		</div>
+	</div>
+</div>

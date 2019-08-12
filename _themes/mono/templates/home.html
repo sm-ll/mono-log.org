@@ -1,0 +1,14 @@
+{{ entries:listing folder="dns" limit="7"}}
+<section>
+    <header>
+    	<h2><a href="{{ url }}">{{ title }}</a></h2>
+    	<p>{{ datestamp format="F jS, Y" }}</p>
+    </header>
+    {{ content }}
+    <aside>
+    	<h3><a href="{{ audio_path }}{{ title }}.mp3" target="_blank">{{ title }}.mp3</a></h3>
+    </aside>
+</section>
+{{ /entries:listing }}
+
+{{ theme:partial src="pagination" }}

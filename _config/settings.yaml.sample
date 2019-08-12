@@ -1,0 +1,236 @@
+#    /\\ \\  /\\\ /\\\\\\   /\     /\\\ /\\\\\\   /\       /\\       /\\  /\\      /\\
+#  /\\    /\\    /\\       /\ \\       /\\       /\ \\     /\ /\\   /\\\  /\\   /\\   /\\
+#   /\\          /\\      /\  /\\      /\\      /\  /\\    /\\ /\\ / /\\  /\\  /\\
+#     /\\        /\\     /\\   /\\     /\\     /\\   /\\   /\\  /\\  /\\  /\\  /\\
+#        /\\     /\\    /\\\\\\ /\\    /\\    /\\\\\\ /\\  /\\   /\  /\\  /\\  /\\
+#  /\\    /\\    /\\   /\\       /\\   /\\   /\\       /\\ /\\       /\\  /\\   /\\   /\\
+#    /\\ \\      /\\  /\\         /\\  /\\  /\\         /\\/\\       /\\  /\\     /\\\\
+#
+###########################################################################################
+#
+#  STATAMIC SITE CONFIGURATION
+#
+###########################################################################################
+
+# Enter your license key
+_license_key:
+
+_language: en
+
+# Only set this if Statamic could not correctly guess your site's root
+_site_root: /
+
+# Name of your site
+_site_name: Another Awesome Statamic Site
+
+# Change the folder name for your content directory
+_content_root: _content
+
+# Used for permalinks
+_site_url: http://statamic.com
+
+# Folder name of your desired theme
+_theme: acadia
+
+# Entries should include timestamp YYYY-MM-DD-HHII
+_entry_timestamps: false
+
+# Global formatting for {{ date }} variables
+_date_format: 'F jS, Y'
+
+# Global formatting for time variables
+_time_format: 'g:ia'
+
+# Timezone
+_timezone: America/New_York
+
+# List of desired taxonomy triggers
+_taxonomy:
+  - categories
+  - tags
+
+# Turns your slugs into pretty urls (spaces become "-" instead of %20)
+_taxonomy_slugify: false
+
+# Make taxonomy values case sensitive (when true, "example" would *not* match "Example")
+_taxonomy_case_sensitive: false
+
+# Converts the display of taxonomies to lowercase
+_taxonomy_force_lowercase: true
+
+# Choose your content parsing syntax
+# Your available options:
+#  - markdown
+#  - textile
+#  - html
+#  - txt
+_content_type: markdown
+
+# enable SmartyPants to translate plain punctuation into “smart” HTML entities
+_enable_smartypants: true
+
+# set to 'true' to enable theme caching busting based on last modified timestamps
+_theme_cache_bust: false
+
+# Specify where to save transformed images
+_transform_destination: assets/img/resized
+
+# allow the use of PHP in Statamic templates
+_allow_php: false
+
+# Choose your YAML mode:
+#  - quick (Dipper, some of YAML 1.0)
+#  - loose (YAML 1.0)
+#  - transitional (YAML 1.2 falling back to 1.0 if parse failure, logging warnings)
+#  - strict (YAML 1.2)
+_yaml_mode: loose
+
+# Choose the markdown parser to use (standard | parsedown)
+_markdown_parser: parsedown
+
+# Choose whether you want your content (e.g. Markdown, Textile...) or your tags parsed first
+_parse_order:
+  - content
+  - tags
+
+# If a given page is too high to return results in a paginated set, should we show the last page instead?
+_fix_out_of_range_pagination: true
+
+# Experimental: Set http/browser cache length. Plain English is perfect. 1 hour, 1 day, 1 week, etc
+_http_cache_expires: false
+
+_enable_static_pipeline: false
+
+# Skip caching member files, will disable the use of member:listing but will allow for many, many more members
+_disable_member_cache: false
+
+
+###########################################################################################
+#
+#  DEBUGGING & DEVELOPMENT
+#
+###########################################################################################
+
+# Specify which URLs belong to a given environment, and when you access Statamic from
+# a matching URL, we'll merge the environment-specific config from _config/environments
+_environments:
+  dev:
+    - 'http://localhost*'
+    - '*.dev'
+    - '*.localip'
+  live:
+    - '*.com'
+
+# Set to 'true' if you want to log system messages
+_log_enabled: false
+
+# What's the least-serious level of message you wish to record to the log?
+# Your available options:
+#  - debug  (this is the least-serious level of logged message)
+#  - info
+#  - warn
+#  - error
+#  - fatal  (this is the most-serious level of logged message)
+# Levels less-serious than what you pick will be ignored
+_log_level: debug
+
+# Path to your log file
+#  - to define a path absolutely, start your path with a /
+#  - otherwise, all paths will be relative to the document root
+_log_file_path: _logs
+
+# Prefixes your log file, helpful if you're collecting multiple Statamic site logs in one directory
+_log_file_prefix: site
+
+# Will show some debugging information about your page at the bottom of each page
+_display_debug_panel: false
+
+
+###########################################################################################
+#
+#  CONTROL PANEL CONFIGURATION
+#
+###########################################################################################
+
+# Enable control panel (make sure you your config/system folders aren't web accessible)
+_admin_enabled: true
+
+# Change the folder name for your admin directory.
+# You can also rename your admin.php file anything you want
+_admin_path: admin
+
+# Folder name of your desired control panel theme
+_admin_theme: ascent
+
+# Customize which pages show in the control panel
+_admin_nav:
+  dashboard: false
+  pages:     true
+  members:   true
+  account:   true
+  system:    true
+  logs:      true
+  help:      true
+  view_site: true
+  logout:    true
+
+# When you log in, where would you like to start?
+_admin_start_page: pages
+
+# Enable/Disable the ability to add new top level pages via the CP
+_enable_add_top_level_page: true
+
+# Enable/Disable the ability to add new child pages via the CP
+_enable_add_child_page: true
+
+# Enable/Disable the ability to delete pages via the CP
+_enable_delete_page: true
+
+# Whether or not to prepend the {{ _site_root }} variable to uploads
+_prepend_site_root_to_uploads: false
+
+# What should be used for handling content revisions (if anything at all)
+# _revisions: local_revisions
+
+# Allow deleting files through the File field
+_allow_file_field_deletions: false
+
+###########################################################################################
+#
+#  MISC CONFIGURATION
+#
+###########################################################################################
+
+# plain english works just fine here.
+_cookies.lifetime: 1 day
+
+# For advanced users only. Here be dragons.
+_cookies.cipher: MCRYPT_RIJNDAEL_256
+_cookies.cipher_mode: MCRYPT_MODE_CBC
+
+# If the slug-maker isn't doing something to your linking, you can override it here;
+# for example, to have "*" be converted to "star" in a slug, you'd do:
+#   "*": "star"
+_custom_transliteration:
+
+
+###########################################################################################
+#
+#  FILE CREATION
+#
+###########################################################################################
+
+# The default permissions Statamic will use for files it creates
+_mode: 0755
+
+
+###########################################################################################
+#
+#  RUNNING STATAMIC ABOVE WEB ROOT
+#
+###########################################################################################
+
+# The folder name of your publicly accessible directory. Usually something like
+# public, www, htdocs, or httpdocs. Leave this blank unless you're running above web root
+
+_public_path:

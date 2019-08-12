@@ -1,0 +1,24 @@
+# The URL containing the login form
+login_url: /member/login
+
+# The URL to forward logged-in members that do not have access to a page
+no_access_url: /no-access
+
+# The URL containing the password form
+password_form_url: /member/password
+
+
+# Note that the following settings are advanced configurations included
+# specifically for using an external login system for checking membership (most
+# likely determined via a custom-written add-on). If you are using Statamic's
+# membership stuff, don't touch these. If you don't know if you are or not,
+# you probably are, so DON'T TOUCH THESE.
+
+# Require that the current user be a logged in member to perform checks?
+require_member: true
+
+# Set the name of the return variable used when redirecting to login page
+return_variable: return
+
+# Use full-URLs for the automatically-captured return URL?
+use_full_url: false

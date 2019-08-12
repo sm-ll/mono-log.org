@@ -1,0 +1,17 @@
+# When set to `true`, HTML caching will be enabled
+enable: false
+
+# How long should pages be cached for? set this to either:
+#   - a time value, like "10 minutes"
+#   - "on last modified", which will invalidate the cache based on that URL's content file's last-modified time
+cache_length: on last modified
+
+# A pipe-separated list of URLs you want to exclude from HTML caching, ending-wildcards OK
+exclude: 
+
+# When `true`, different query strings in URLs will all result in the same page being shown,
+# for example /about and /about?something will all show the same page: /about
+# This prevents people from appending "?whatever" to URLs to force the page to re-cache, but
+# will break any pages relying on query strings.
+# However, the ?page= query string *will* be kept intact so you can use pagination.
+ignore_query_strings: false

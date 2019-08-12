@@ -1,0 +1,61 @@
+#
+# Color Fieldtype
+# Set global options for your color fieldtype, each of these options can be set per-field
+#
+
+# general appearance
+# -----------------------------------------------------------------------------
+
+# places the actual color picker right on the page instead of in a pop-up
+select_on_page: false
+
+# the color to show by default
+starting_color: '#fff'
+
+# show an input of the color selected? input is also editable
+show_input: true
+
+# show the initial color in the pop-up? helpful for comparing new colors to current
+show_initial: false
+
+# show alpha slider? will use rgba to save color which, remember, doesn't work in old IEs
+show_alpha: false
+
+# button text to accept the color select
+choose_text: "Pick"
+
+# button text to cancel selection
+cancel_text: "Cancel"
+
+# choose a preferred color format to display, options: hex|hsl|rgb|name
+preferred_format: "hex"
+
+
+# palette preferences
+# -----------------------------------------------------------------------------
+
+# show a palette of pre-defined colors?
+show_palette: true
+
+# only show the palette (hide the color picker)
+show_palette_only: false
+
+# define a list of colors to display in pop-up color palette
+# this can be two list-levels, each top-level list will be its own palette
+# otherwise, a one-level list will just be its own palette
+palette:
+  - '#ed1d38'
+  - '#44b8ea'
+  - '#1696c9'
+  - '#d6d616'
+  - '#adb235'
+
+# add user selections to the palette?
+# note that colors cannot be deleted from this palette
+show_selection_palette: false
+
+# maximum number of user-selected colors stored in the selection palette
+max_selection_size: 10
+
+# any color field sharing the same local_storage_key will share the same selection palette
+local_storage_key: ""

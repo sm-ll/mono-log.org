@@ -1,0 +1,15 @@
+{{ theme:partial src="pagination" }}
+
+{{ entries:listing folder="dns" limit="100" }}
+<section>
+    <header>
+        <h2><a href="{{ audio_path }}{{ title }}.mp3" target="_blank" title="mp3 link">{{ title }}.mp3</a></h2>
+        <p>{{ datestamp format="M jS, Y" }}</p>
+    </header>
+    <footer>
+        <p><a href="{{ url }}" title="Read full post">{{ sub_title }}</a></p>
+    </footer>
+</section>
+{{ /entries:listing }}
+
+{{ theme:partial src="pagination" }}

@@ -1,0 +1,80 @@
+#
+# Default Location Settings
+#
+# Each of the settings can be set per-field in the fieldset configuration
+# -----------------------------------------------------------------------------
+
+# starting map location & zoom
+starting_latitude: 44.33
+starting_longitude: -68.21
+starting_zoom: 16
+
+# boundary zoom levels allowed in map
+min_zoom: 4
+max_zoom: 18
+
+# latitude & longitude float precision
+float_precision: 5
+
+# geolocation
+allow_geolocation: true
+geolocation_zoom: 17
+use_foursquare: true
+foursquare_client_id: CTRSTN2PTJZ2GIMA1EBIKCRUV4FFMK2DR5X23EIFJGIPM5A4
+foursquare_client_secret: PRQQA4IOT2S1DDUMFSZI4MDFCKWIRNEMZHJCXZNGCL30G3PC
+foursquare_radius: 200
+
+# map interaction options
+interaction_scroll_wheel_zoom: false
+interaction_double_click_zoom: true
+interaction_box_zoom: true
+interaction_touch_zoom: true
+interaction_draggable: true
+interaction_tap: true
+
+# mapping service
+# not all of these options might be used for different services
+mapping_service: openstreetmap
+mapping_service_api_key: 
+mapping_service_style: 
+mapping_service_attribution:
+
+# detects high-density displays and will double the tiles displayed
+detect_retina: false
+
+# lets you provide a list of common locations for users to easily choose from
+# each location should be formatted like this:
+#
+#   -
+#     name: Name of Place
+#     latitude: 44.33
+#     longitude: -68.21
+#     zoom: 12
+#
+# note: zoom is optional for each location, if not set, it will use starting_zoom
+common_locations:
+  -
+    name: Acadia National Park
+    latitude: 44.33
+    longitude: -68.21
+    zoom: 12
+  -
+    name: Badlands National Park
+    latitude: 43.75
+    longitude: -102.50
+    zoom: 12
+  -
+    name: Denali National Park
+    latitude: 63.33
+    longitude: -150.5
+    zoom: 12
+  -
+    name: Olympic National Park
+    latitude: 47.97
+    longitude: -123.50
+    zoom: 12
+  -
+    name: Yellowstone National Park
+    latitude: 44.61467
+    longitude: -110.47646
+    zoom: 12

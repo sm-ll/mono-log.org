@@ -1,0 +1,34 @@
+<div class="existing-file-selector" 
+	data-cpurl="{{ cp_url }}" 
+	data-destination="{{ secure_destination }}"
+	data-deletemessage="{{ localization fetch='are_you_sure' }}"
+>
+	<div class="modal">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			<h3>{{ localization fetch="choose_file_from" }} /{{ destination }}</h3>
+		</div>
+		<div class="modal-body">
+			<div class="files">
+				{{ server_files }}
+					<div class="file" data-filename="{{ value }}">
+						<img 
+							src="{{ default_thumbnail }}" 
+							{{ if image }}data-src="{{ _site_root }}TRIGGER/file/render_thumbnail?path={{ value }}"{{ /if }}
+							alt="" width="125" height="125" 
+						/>
+						<div class="filename"><a href="{{ value }}" target="_blank" title="{{ value }}">{{ display_name }}</a></div>
+						<div class="action">
+							{{ if allow_delete }}<a href="#" class="delete"><span class="ss-icon">&#xE0D0;</span></a>{{ /if }}
+							<a href="{{ value }}" target="_blank" class="view"><span class="ss-icon">&#x1F50E;</span></a>
+							<a href="#" class="select"><span class="ss-icon">&#xEC08;</span></a>
+						</div>
+					</div>
+				{{ /server_files }}
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+			</div>
+		</div>
+	</div>
+</div>

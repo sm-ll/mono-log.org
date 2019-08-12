@@ -1,0 +1,108 @@
+
+/* mono theme by Mimo Design */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+@import url('meyer.css');
+
+/* ========== Main and Typography ========== */
+
+body {
+    font-size: 100%;
+}
+
+html {
+    font-size: 62.5%;
+    border: 6px solid #0000ff;
+    margin: 6px;
+    padding: 6px;
+}
+
+body {
+    background-color: #fff;
+    color: #0000ff;
+    margin: 0 auto;
+    max-width: 303px;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-size: 1.4em;
+    font-weight: 600;
+    line-height: 1.4em;
+    text-transform: lowercase;
+}
+
+header {
+}
+
+.container {
+    border-top: 6px solid #0000ff;
+    border-bottom: 6px solid #0000ff;
+    margin: 0 auto;
+    width: 100%;
+}
+
+section {
+    border-bottom: 6px solid #0000ff;
+    padding-bottom: 6px;
+}
+
+footer {
+    margin-top: 12px;
+    padding-bottom: 12px;
+}
+
+a {
+    color: #0000ff;
+    display: block;
+    text-transform: lowercase;
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 4px solid #0000ff;
+}
+
+h2, h3 {
+	margin: 12px 0 6px 0;
+}
+
+h1, p {
+    text-transform: none;
+    margin-bottom: 6px;
+}
+
+img {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+img {
+    height: 0px;
+    border-bottom: 120px solid #0000ff; 
+}
+
+/* ========== Mobile ========== */
+
+@media only screen and  (max-width: 404px) {
+
+    html {
+        border: 6px solid #ffffff;
+        margin: 6px;
+        padding: 6px;
+    }
+
+    body {
+        background-color: #0000ff;
+        color: #fff;
+    }
+
+    h1, h2, h3, p, a {
+        color: #fff;
+        border-color: #fff;
+    }
+
+    .container {
+        border-top: 6px solid #ffffff;
+        border-bottom: 6px solid #ffffff;
+    }
+
+    img {
+        border-bottom: 120px solid #fff; 
+    }
+}

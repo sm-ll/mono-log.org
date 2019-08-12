@@ -1,0 +1,31 @@
+<!-- all pages -->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Mono-log. A daily upload project that began in 2012 with the Nord Modular G1." >
+<meta name="keywords" content="nord modular, nord, modular, g1, monolog, mono-log, mono log, pokk!, snd, martin j thompson, sm-ll, typeface, default, system, sys, reloc, en creux, moog mother 32, computer controlled, tb-303, tr-606, tr-808, emulation" >
+<meta name="viewport" content="width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=0, initial-scale=1">
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26970845-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<title>{{ _site_name }}</title>
+<link rel="icon" type="image/ico" href="../assets/favicon.ico" />
+<link rel="stylesheet" href="{{ theme:css }}" />
+</head>
+<body>
+<div class="container">
+    {{ theme:partial src="header" }}
+		{{ layout_content }}
+    {{ theme:partial src="footer" }}
+</div>
+</body>
+</html>

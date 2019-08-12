@@ -1,0 +1,16 @@
+<div class="replicator-set-buttons">
+	<span class="replicator-set-options">
+		<span class="ss-icon" title="{{ Localization fetch="options" }}">cog</span>
+		<div class="options">
+			<a href="#" class="replicator-hide-sets"><span class="ss-icon">writingdisabled</span> {{ Localization fetch="hide_all" }}</a>
+			<a href="#" class="replicator-show-sets"><span class="ss-icon">write</span> {{ Localization fetch="show_all" }}</a>
+			{{ set_types }}
+				<a href="#" class="add-set-here" data-set="{{ name }}" title="{{ instructions }}"><span class="ss-icon">add</span> {{ display }}</a>
+			{{ /set_types }}
+		</div>
+	</span>
+	<span class="ss-icon replicator-set-toggle toggle-contract" title="{{ Localization fetch="toggle" }}">write</span>
+	<span class="ss-icon replicator-set-toggle toggle-expand" title="{{ Localization fetch="toggle" }}">writingdisabled</span>
+	<span class="ss-icon replicator-set-delete" title="{{ Localization fetch="delete" }}" data-confirm-message="{{ Localization fetch='are_you_sure' }}">delete</span>
+	<span class="ss-icon replicator-set-move" title="{{ Localization fetch="move" }}">move</span>
+</div>

@@ -1,0 +1,26 @@
+###########################################################################################
+#
+#  STATAMIC CUSTOM ROUTES
+#
+###########################################################################################
+
+routes:
+
+  # SIMPLE ROUTE EXAMPLE
+  # Visiting example.com/contact-us will...
+  # load the /templates/contact.html template
+
+
+
+
+  # ADVANCED ROUTE EXAMPLE
+  # Visiting example.com/members/login will...
+  # load the /templates/success.html template
+  # and use the /layouts/system.html layout
+
+  # /members/login:
+    # template: success
+    # layout: system
+
+ignore:
+  # - success

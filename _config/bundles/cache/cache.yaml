@@ -1,0 +1,39 @@
+# a quick way to globally disable this
+enable: true
+
+# the default amount of time to cache content if `for` isn't specified
+default_cache_length: 12 hours
+
+# when this is set to `site`, caches will be reused across all pages;
+# when this is set to `page`, caches will not be reused across pages
+default_scope: site
+
+# if set, this add-on will regularly clean up stored caches older than this 
+# value, settable as a normal string, like "5 minutes," or "28 days," be 
+# sure to make this value something older than your longest cache, "30 days" 
+# is generally pretty safe
+garbage_threshold: 30 days
+
+
+# automatically invalidating caches
+# -----------------------------------------------------------------------------
+
+# for use with the control panel:
+# when content is published through the control panel, if the content's
+# folder matches a folder defined in this list, the associated key's caches
+# will be deleted, an example implementation (that works with default install):
+#
+# publish_invalidation:
+#   -
+#     folder: calendar
+#     key: calendar-listing
+#
+publish_invalidation:
+    
+# a list of keys that should be invalidated each day, handy for content that
+# will not change more than once per day, like a calendar, an example
+# implementation (that works with the default install):
+#
+# new_day_invalidation:
+#   - calendar_listing
+new_day_invalidation:

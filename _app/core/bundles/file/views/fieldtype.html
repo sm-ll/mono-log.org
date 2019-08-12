@@ -1,0 +1,44 @@
+<div
+	id="%%field_id%%"
+	class="file-field-container empty"
+	data-config='{
+		{{ if allow_browse }}"browse": "{{ browse_url }}",{{ /if }}
+		"acceptedFiles": "{{ field_config:allowed }}.{{ value }}{{ if !last }}, {{ /if }}{{ /field_config:allowed }}",
+		"maxFiles": {{ field_config:max_files or "null" }},
+		"fileThumb": "{{ field_config:file_thumb or file_thumb }}"
+	}'>
+
+	<div
+		class="drop-area"
+		data-id="%%field_id%%"
+		data-destination="upload?destination={{ destination }}&amp;id=%%field_id%%{{ if resize }}&amp;{{ resize }}{{ /if }}"
+	>
+		<div class="helper-text placeholder"><span class="ss-icon">importfile</span> {{ localization fetch="upload_file" }}</div>
+		<div class="helper-text drop-text"><span class="ss-icon">down</span> {{ localization fetch="drop_your_file" }}!</div>
+		<div class="click-target"></div>
+		{{ if allow_browse }}
+			<div class="choose-existing-file">{{ localization fetch="or" }} <span>{{ localization fetch="choose_existing_file" }}</span></div>
+		{{ /if }}
+	</div>
+
+	<div class="existing-files"></div>
+
+	<input type="hidden" name="%%field_name%%" class="file-values" value="" />
+
+	{{# Don't output a script in the Grid. #}}
+	{{ if field_id != "rename_me" }}
+	<script>
+		$('#%%field_id%%').statamicFile({
+			existingFiles: {{ if has_data }}[
+				{{ field_data }}
+					{
+						path: "{{ value }}",
+						thumbnail: "{{ transform src='{ value }' width='125' height='125' action='smart' }}"
+					}{{ unless last }},{{ /unless }}
+				{{ /field_data }}]
+			{{ else }}[]{{ /if }}
+		});
+	</script>
+	{{ /if }}
+
+</div>

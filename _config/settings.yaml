@@ -1,0 +1,134 @@
+#    /\\ \\  /\\\ /\\\\\\   /\     /\\\ /\\\\\\   /\       /\\       /\\  /\\      /\\   
+#  /\\    /\\    /\\       /\ \\       /\\       /\ \\     /\ /\\   /\\\  /\\   /\\   /\\
+#   /\\          /\\      /\  /\\      /\\      /\  /\\    /\\ /\\ / /\\  /\\  /\\       
+#     /\\        /\\     /\\   /\\     /\\     /\\   /\\   /\\  /\\  /\\  /\\  /\\       
+#        /\\     /\\    /\\\\\\ /\\    /\\    /\\\\\\ /\\  /\\   /\  /\\  /\\  /\\       
+#  /\\    /\\    /\\   /\\       /\\   /\\   /\\       /\\ /\\       /\\  /\\   /\\   /\\
+#    /\\ \\      /\\  /\\         /\\  /\\  /\\         /\\/\\       /\\  /\\     /\\\\  
+#                                                                                                      
+###########################################################################################
+#
+#  STATAMIC SITE CONFIGURATION
+#
+###########################################################################################
+
+# Enter your license key
+_license_key: feb34664-84bf-47d9-8318-934431640848
+
+# Change if you are running Statamic in a subdirectory
+_site_root: /
+
+# Name of your site
+_site_name: Mono-log
+
+# Change the folder name for your content directory
+_content_root: _content
+
+# Used for permalinks
+_site_url: http://mono-log.org
+
+# Folder name of your desired theme
+_theme: mono
+
+# Entries should include timestamp YYYY-MM-DD-HHII
+_entry_timestamps: false
+
+# Global formatting for {{ date }} variables
+_date_format: 'F jS, Y'
+
+# List of desired taxonomy triggers
+_taxonomy: [categories, tags]
+
+# Turns your slugs into pretty urls (spaces become "-" instead of %20)
+_taxonomy_slugify: false
+
+# Choose your content parsing syntax
+# Your available options:
+#  - markdown
+#  - markdown_edge (extra, experimental features!)
+#  - textile
+#  - html
+#  - txt
+_content_type: markdown
+
+# enable SmartyPants to translate plain punctuation into “smart” HTML entities
+_enable_smartypants: true
+
+# set to 'true' to enable theme caching busting based on last modified timestamps
+_theme_cache_bust: false
+
+# allow the use of PHP in Statamic templates
+_allow_php: false
+
+# Choose whether you want your content (e.g. Markdown, Textile...) or your tags parsed first
+_parse_order:
+  - content
+  - tags
+
+# Specify which URLs belong to a given environment, and when you access Statamic from
+# a matting URL, we'll merge the environment-specific config from _config/environments
+_environments:
+  dev:
+    - 'http://localhost*'
+    - '*.dev'
+    - '*.localip'
+  live:
+    - '*.com'
+
+# Set to 'true' if you need more robust debug errors
+_debug: true
+
+_display_debug_panel: false
+
+
+###########################################################################################
+#
+#  CONTROL PANEL CONFIGURATION
+#
+###########################################################################################
+
+# Enable control panel (make sure you your config/system folders aren't web accessable)
+_admin_enabled: yes
+
+# Change the folder name for your admin directory.
+# You can also rename your admin.php file anything you want
+_admin_path: admin
+
+# Folder name of your desired control panel theme
+_admin_theme: trailhead
+
+# Customize which pages show in the control panel
+_admin_nav:
+  dashboard: yes
+  pages: yes
+  members: yes
+  account: yes
+  system: yes
+  help: yes
+  view_site: yes
+  logout: yes
+
+# When you log in, where would you like to start?
+_admin_start_page: system
+
+# Change this to make your site more secure
+_cookies.secret_key: TAME_DAS_WILD #changeme!
+
+# plain english works just fine here.
+_cookies.lifetime: 3 months
+
+# For advanced users only. Here be dragons.
+_cookies.cipher: MCRYPT_RIJNDAEL_256
+_cookies.cipher_mode: MCRYPT_MODE_CBC
+
+
+###########################################################################################
+#
+#  RUNNING STATAMIC ABOVE WEB ROOT
+#
+###########################################################################################
+
+# The folder name of your publically accessble directory. Usually something like
+# public, www, htdocs, or httpdocs. Leave this blank unless you're running above web root
+
+_public_path: /

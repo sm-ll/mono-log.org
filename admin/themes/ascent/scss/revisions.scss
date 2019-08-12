@@ -1,0 +1,101 @@
+.revisions-commit-message {
+	margin-bottom: 20px;
+
+	input {
+		padding: 10px;
+		width: 100%;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		font-size: 15px;
+		font-family: "Open Sans","Helvetica Neue",Arial,sans-serif;
+		border: 1px solid rgba(0,0,0,0.15);
+		border-radius: 2px;
+		box-shadow: inset 0px 1px 4px rgba(0,0,0,0.1);
+	}
+}
+
+.revisions-modal {
+	display: none;
+
+	.modal-body { padding: 0; }
+	.btn .ss-icon {
+		padding-right: 0;
+		margin-left: 0;
+	}
+}
+
+.revisions-selector {
+
+	tr { cursor: pointer; }
+
+	.simple-table td { 
+		padding-top: 10px;
+		padding-bottom: 10px;
+		line-height: 1.5;
+	}
+
+	td:last-child { padding-right: 14px !important; }
+
+	input[type=radio] {
+		float: left;
+		margin: 7px 0 0 -20px;
+	}
+
+	.meta {
+		font-size: 11px;
+		color: #aaa;
+		line-height: 1.1;
+		margin-top: 5px;
+	}
+
+	code { 
+		color: #999;
+		float: right;
+	}
+	
+	.tag {
+		background-color: #354144;
+		color: #fff;
+		float: right;
+		padding: 0.35em 0.6em;
+		display: inline-block;
+		border-radius: 0.25em;
+		font-size: 0.75em;
+		margin-left: 0.25em;
+		text-transform: uppercase;
+		margin-top: 0.13em;
+		line-height: 1;
+	}
+}
+
+.revisions-save-message {
+	.save-form {
+		padding: 9px 15px;
+		
+		textarea {
+			box-sizing: border-box;
+			border: 1px solid #ddd;
+			width: 100%;
+			padding: 0.5em 0.8em;
+			height: 120px;
+		}
+		
+		.instructions {
+			color: #666;
+			font-style: italic;
+			font-size: 0.9125em;
+		}
+	}
+}
+
+.revisions-feedback {
+	padding: 15px 35px;
+	background: #edede7;
+	margin: -35px -35px 20px;
+
+	.ss-icon {
+		font-size: 18px;
+		vertical-align: middle;
+	}
+}

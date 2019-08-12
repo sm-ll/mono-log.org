@@ -1,0 +1,13 @@
+	<div class="replicator-set set-{{ name }}">
+		<input type="hidden" name="{{ field_name }}[%%replicator_index%%][type]" value="{{ name }}" />
+		{{ buttons }}
+		<div class="replicator-set-label">
+			<div class="label">{{ display }}</div>
+			{{ if instructions }}<div class="instructions">{{ instructions }}</div>{{ /if }}
+		</div>
+		{{ fieldtypes }}
+			<div class="input-block input-{{ type }}">
+				{{ fieldtype }}
+			</div>
+		{{ /fieldtypes }}
+	</div>
