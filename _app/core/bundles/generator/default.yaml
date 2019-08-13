@@ -1,5 +1,0 @@
-destination: _static
-copy:
-  - _themes/{theme}/css
-  - _themes/{theme}/img
-  - assets
